@@ -22,9 +22,11 @@ class MovieCell: UITableViewCell {
 
     // MARK: - Configure
 
-    func configure(icon: String?, title: String, year: String) {
+    func configure(icon: String?, title: String, date: String) {
         movieTitleLabel.text = title
-        movieYearLabel.text = year
+        movieYearLabel.text = Utilities.getComponent(component: "yyyy",
+                                                     from: date,
+                                                     using: "yyyy-MM-dd")
         if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (icon ?? "")) {
             movieIcon.kf.setImage(with: imageURL)
         }

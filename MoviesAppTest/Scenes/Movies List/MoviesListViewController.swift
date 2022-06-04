@@ -54,7 +54,7 @@ extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let movie = viewModel.movieAtIndex(index: indexPath.row)  else { return UITableViewCell() }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
-        cell.configure(icon: movie.poster_path, title: movie.title, year: movie.release_date)
+        cell.configure(icon: movie.poster_path, title: movie.title, date: movie.release_date)
 
         return cell
     }
