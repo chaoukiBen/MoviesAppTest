@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct MoviesListViewModel {
+    var movies: [Movie]?
+}
