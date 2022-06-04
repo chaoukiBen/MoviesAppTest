@@ -13,17 +13,17 @@ class MovieCell: UITableViewCell {
 
     static let identifier = "MovieCell"
 
-    // MARK: - Life cycle
+    // MARK: - Outlets
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var movieIcon: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var movieYearLabel: UILabel!
+
+    // MARK: - Configure
+
+    func configure(icon: String, title: String, year: String) {
+        movieIcon.image = UIImage(named: icon)
+        movieTitleLabel.text = title
+        movieYearLabel.text = year
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
