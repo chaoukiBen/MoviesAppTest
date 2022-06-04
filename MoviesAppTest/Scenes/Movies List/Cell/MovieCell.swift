@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCell: UITableViewCell {
 
@@ -21,9 +22,11 @@ class MovieCell: UITableViewCell {
 
     // MARK: - Configure
 
-    func configure(icon: String, title: String, year: String) {
-        movieIcon.image = UIImage(named: icon)
+    func configure(icon: String?, title: String, year: String) {
         movieTitleLabel.text = title
         movieYearLabel.text = year
+        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500" + (icon ?? "")) {
+            movieIcon.kf.setImage(with: imageURL)
+        }
     }
 }
