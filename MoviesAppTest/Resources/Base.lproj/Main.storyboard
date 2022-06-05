@@ -38,6 +38,95 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="92.410714285714278"/>
         </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="BvQ-c3-TgP">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="rte-Jt-M6C" customClass="MovieDetailViewController" customModule="MoviesAppTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hai-la-2vW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUQ-4u-OYg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJs-ux-OSp" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HNw-qg-KiE">
+                                                <rect key="frame" x="10" y="10" width="394" height="228"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="HNw-qg-KiE" secondAttribute="height" multiplier="197:114" id="U6h-uW-TNR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PFf-PZ-WPg">
+                                                <rect key="frame" x="10" y="258" width="394" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-cC-gEY" userLabel="Movie title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjI-ZD-doC" userLabel="Movie year">
+                                                        <rect key="frame" x="0.0" y="30.5" width="394" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-nf-hcf" userLabel="Movie Description">
+                                                        <rect key="frame" x="0.0" y="61" width="394" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="PFf-PZ-WPg" secondAttribute="trailing" constant="10" id="Alc-6Y-4E6"/>
+                                            <constraint firstItem="HNw-qg-KiE" firstAttribute="leading" secondItem="XJs-ux-OSp" secondAttribute="leading" constant="10" id="MR3-MY-Eu9"/>
+                                            <constraint firstItem="HNw-qg-KiE" firstAttribute="top" secondItem="XJs-ux-OSp" secondAttribute="top" constant="10" id="UhA-Ve-E7v"/>
+                                            <constraint firstAttribute="trailing" secondItem="HNw-qg-KiE" secondAttribute="trailing" constant="10" id="aaN-Un-M2m"/>
+                                            <constraint firstItem="PFf-PZ-WPg" firstAttribute="leading" secondItem="XJs-ux-OSp" secondAttribute="leading" constant="10" id="d4d-2p-5ho"/>
+                                            <constraint firstItem="PFf-PZ-WPg" firstAttribute="top" secondItem="HNw-qg-KiE" secondAttribute="bottom" constant="20" id="n6r-hM-XL0"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PFf-PZ-WPg" secondAttribute="bottom" constant="439.5" id="s22-MZ-IQd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XJs-ux-OSp" secondAttribute="trailing" id="2b9-k3-bD3"/>
+                                    <constraint firstItem="XJs-ux-OSp" firstAttribute="height" secondItem="bUQ-4u-OYg" secondAttribute="height" multiplier="0.99022" priority="250" constant="8" id="BtJ-TQ-6yt"/>
+                                    <constraint firstItem="XJs-ux-OSp" firstAttribute="leading" secondItem="bUQ-4u-OYg" secondAttribute="leading" id="Cmj-KF-5Fe"/>
+                                    <constraint firstItem="XJs-ux-OSp" firstAttribute="width" secondItem="bUQ-4u-OYg" secondAttribute="width" id="LxR-u1-9gL"/>
+                                    <constraint firstItem="XJs-ux-OSp" firstAttribute="top" secondItem="bUQ-4u-OYg" secondAttribute="top" id="NIb-IR-YaY"/>
+                                    <constraint firstAttribute="bottom" secondItem="XJs-ux-OSp" secondAttribute="bottom" id="fgs-cF-oik"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OEp-92-L5i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bUQ-4u-OYg" firstAttribute="trailing" secondItem="OEp-92-L5i" secondAttribute="trailing" id="5tD-Lw-nBQ"/>
+                            <constraint firstItem="bUQ-4u-OYg" firstAttribute="leading" secondItem="OEp-92-L5i" secondAttribute="leading" id="EhG-Xy-uJM"/>
+                            <constraint firstItem="bUQ-4u-OYg" firstAttribute="bottom" secondItem="OEp-92-L5i" secondAttribute="bottom" id="hgc-2Y-cD2"/>
+                            <constraint firstItem="bUQ-4u-OYg" firstAttribute="top" secondItem="OEp-92-L5i" secondAttribute="top" id="lNB-dg-bGj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieDescriptionLabel" destination="rEz-nf-hcf" id="G0b-45-Bxs"/>
+                        <outlet property="movieImage" destination="HNw-qg-KiE" id="yjI-v5-0ab"/>
+                        <outlet property="movieTitleLabel" destination="5JU-cC-gEY" id="VwU-Wi-gyj"/>
+                        <outlet property="movieYearLabel" destination="FjI-ZD-doC" id="Ukc-T4-hZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XA7-O8-YSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737.68115942029" y="92.410714285714278"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qKW-sJ-cOz">
             <objects>
