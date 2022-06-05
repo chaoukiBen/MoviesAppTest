@@ -58,4 +58,11 @@ extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let movie = viewModel.movieAtIndex(index: indexPath.row)  else { return }
+        
+        let detailVC = MovieDetailViewController.create(viewModel: MovieDetailViewModel(movie: movie))
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
